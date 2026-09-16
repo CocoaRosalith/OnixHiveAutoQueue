@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiveAutoQueue", "HiveAutoQueue/HiveAutoQueue.csproj", "{F884C8E5-5E4F-496F-BF65-DFCE80601934}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|x64 = Debug|x64
+        Release|x64 = Release|x64
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {F884C8E5-5E4F-496F-BF65-DFCE80601934}.Debug|x64.ActiveCfg = Debug|x64
+        {F884C8E5-5E4F-496F-BF65-DFCE80601934}.Debug|x64.Build.0 = Debug|x64
+        {F884C8E5-5E4F-496F-BF65-DFCE80601934}.Release|x64.ActiveCfg = Release|x64
+        {F884C8E5-5E4F-496F-BF65-DFCE80601934}.Release|x64.Build.0 = Release|x64
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {492D3FE1-5A96-4DE8-BF20-7524B0D49DCD}
+    EndGlobalSection
+EndGlobal

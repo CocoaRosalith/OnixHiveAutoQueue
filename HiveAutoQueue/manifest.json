@@ -1,0 +1,13 @@
+{
+  "uuid": "d464baf6-f567-435c-bf7d-1a389a790743",
+  "plugin_name": "HiveAutoQueue",
+  "plugin_author": "I Read YURIs",
+  "plugin_description": "a port of HiveAutoQueue by xJqms and Onix",
+  "plugin_version": "1.0.0",
+  "game_version": "1.26.51",
+  "supported_game_version_ranges": [
+    "0.0.0-9.99.9"
+  ],
+  "runtime_version": 8,
+  "target_assembly": "HiveAutoQueue.dll"
+}
