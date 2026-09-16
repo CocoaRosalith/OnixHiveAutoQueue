@@ -18,7 +18,6 @@ namespace hiveWinstreak {
     public static class HiveGameModeExtensions {
         private static readonly Dictionary<string, HiveGameMode> QueueCodeToMode = new(StringComparer.OrdinalIgnoreCase) {
             ["Bed"] = HiveGameMode.Bedwars,
-            ["Wars"] = HiveGameMode.Bedwars, // legacy "Treasure Wars" queue code
             ["DR"] = HiveGameMode.DeathRun,
             ["Hide"] = HiveGameMode.HideAndSeek,
             ["Murder"] = HiveGameMode.MurderMystery,

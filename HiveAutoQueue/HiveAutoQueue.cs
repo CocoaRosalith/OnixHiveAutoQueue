@@ -69,6 +69,12 @@ namespace HiveAutoQueue {
             if (!heldItem.IsEmpty && heldItem.CustomName == GameSelectorItemName) {
                 LastGamemodeRaw = HiveQueueCode.Hub;
             }
+
+            var nametag = localPlayer.Nametag;
+            if (nametag.Length >= 2 && nametag[0] == '§') {
+                var team = TeamNameFromColorCode(nametag[1]);
+                if (team is not null) _team = team;
+            }
         }
 
         private bool OnChatReceive(string message, string username, string xuid, ChatMessageType type) {
@@ -96,24 +102,6 @@ namespace HiveAutoQueue {
                 message.Contains("§cYou're issuing commands too quickly, try again later.") ||
                 message.Contains("§cUnknown command. Sorry!")) {
                 return true;
-            }
-
-            if (message.Contains("§rYou are on the ") && message.Length >= 30) {
-                _team = message[29] switch {
-                    'e' => "§eYellow",
-                    'a' => "§aLime",
-                    'c' => "§cRed",
-                    '9' => "§9Blue",
-                    '6' => "§6Gold",
-                    'd' => "§dMagenta",
-                    'b' => "§bAqua",
-                    '7' => "§7Gray",
-                    '5' => "§5Purple",
-                    '2' => "§2Green",
-                    '8' => "§8Dark Gray",
-                    '3' => "§3Cyan",
-                    _ => "Unknown",
-                };
             }
 
             HandleGameEndMessages(message, localPlayer);
@@ -217,6 +205,22 @@ namespace HiveAutoQueue {
             }
             return false;
         }
+
+        private static string? TeamNameFromColorCode(char colorCode) => colorCode switch {
+            'e' => "§eYellow",
+            'a' => "§aLime",
+            'c' => "§cRed",
+            '9' => "§9Blue",
+            '6' => "§6Gold",
+            'd' => "§dMagenta",
+            'b' => "§bAqua",
+            '7' => "§7Gray",
+            '5' => "§5Purple",
+            '2' => "§2Green",
+            '8' => "§8Dark Gray",
+            '3' => "§3Cyan",
+            _ => null,
+        };
 
         internal void Requeue(string game, string? message = null, bool sendRequeue = false) {
             if (Onix.ConnectionInfo.ConnectedIp.Contains("zeqa", StringComparison.OrdinalIgnoreCase)) return;
