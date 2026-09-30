@@ -1,7 +1,7 @@
 # HiveAutoQueue
 a port of HiveAutoQueue by xJqms and Onix
 
-- By **I Read YURIs**
+- By **Rxsalith**
 
 ## Support
 For support, questions, or bug reports:
